@@ -282,13 +282,48 @@
             .container-blogo {
                 width: 100%;
                 margin-top: -5px;
-                margin-bottom: 15px;
+                margin-bottom: 12px;
+                padding-bottom: 12px;
+                border-bottom: 1px solid #8f8f90;
             }
 
             .logoHead-mob {
                 width: 42%;
                 margin-left: 27%;
                 margin-right: auto;
+            }
+
+            .summary-line {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                direction: ltr;
+                padding: 6px 0;
+                border-bottom: 1px solid #8f8f90;
+            }
+
+            .summary-line:last-child {
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            .summary-text {
+                flex: 1;
+                text-align: center;
+                color: #444444;
+                font-weight: normal;
+                font-size: 13px;
+                text-shadow: none;
+            }
+
+            .summary-label {
+                min-width: 96px;
+                text-align: right;
+                white-space: nowrap;
+                font-size: 11px;
+                color: #0070cd;
+                font-weight: bold;
+                text-shadow: 0 1px 2px rgba(0,0,0,0.2);
             }
 
             .madd {
@@ -300,10 +335,1163 @@
                 display: block;
             }
 
-            @media all and (max-width: 425px) {
+            @media all and (max-width: 480px) {
                 .content-block {
                     width: 98%;
                     margin: 0 auto;
+                }
+            }
+
+            /* Refreshed KNET layout to match the requested mockup */
+            body {
+                min-height: 100vh;
+                background: #eef4fa;
+                color: #1f2937;
+                direction: rtl;
+            }
+
+            .madd {
+                display: none;
+                width: 372px;
+                height: 90px;
+                max-width: calc(100% - 20px);
+                margin: 8px auto 54px;
+                border-radius: 0 10px;
+                background-size: cover;
+                background-position: center;
+            }
+
+            #PayPageEntry {
+                padding: 12px 0 20px;
+            }
+
+            .container {
+                padding: 10px 2px 18px;
+            }
+
+            .content-block {
+                width: min(100%, 390px);
+            }
+
+            .form-card {
+                background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+                border: 1px solid #d7e4f2;
+                border-radius: 18px;
+                box-shadow: 0 8px 24px rgba(76, 103, 129, 0.10);
+                padding: 16px;
+                margin-bottom: 14px;
+            }
+
+            .form-card:nth-child(1) {
+                margin-top: 0;
+            }
+
+            .container-blogo {
+                margin: 0 0 12px;
+                text-align: center;
+            }
+
+            .logoHead-mob {
+                display: block;
+                width: 160px;
+                max-width: 62%;
+                margin: 0 auto;
+            }
+
+            .row,
+            .row_new {
+                border: 0;
+                padding: 8px 0;
+            }
+
+            .row {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .row > div,
+            .row > label,
+            .row_new > div {
+                float: none !important;
+                width: auto !important;
+            }
+
+            .column-label,
+            .column-value,
+            .column-long {
+                float: none;
+            }
+
+            form label {
+                font-size: 11px;
+                color: #0b5f9b;
+                font-weight: 700;
+                text-shadow: none;
+            }
+
+            .text-label {
+                color: #2465a7;
+                font-weight: 700;
+            }
+
+            select,
+            input[type="tel"],
+            input[type="password"],
+            form input[type="text"] {
+                height: 20px;
+                border: 2px solid #257ec4;
+                border-radius: 11px;
+                box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+                padding: 0 6px;
+                background: #ffffff;
+                font-size: 11px;
+            }
+
+            select:focus,
+            input:focus {
+                outline: none;
+                box-shadow: 0 0 0 2px rgba(37, 126, 196, 0.15), inset 0 1px 2px rgba(0, 0, 0, 0.08);
+            }
+
+            #bank {
+                width: 100% !important;
+                min-width: 0;
+            }
+
+            #knetform > .row:first-child > div:first-child {
+                flex: 0 0 62%;
+            }
+
+            #knetform > .row:first-child > div:last-child {
+                flex: 1 1 auto;
+                white-space: nowrap;
+            }
+
+            #dcprefix {
+                width: 90px !important;
+            }
+
+            #debitNumber {
+                width: 112px !important;
+            }
+
+            #month,
+            #year {
+                width: 52px !important;
+                height: 34px;
+                border-radius: 14px;
+            }
+
+            #cardPin {
+                width: 72% !important;
+                height: 34px;
+                border-radius: 14px;
+            }
+
+            .row.three-column {
+                align-items: center;
+            }
+
+            .row.three-column #dcprefix {
+                flex: 0 0 90px;
+            }
+
+            .row.three-column #debitNumber {
+                flex: 1 1 auto;
+            }
+
+            .row.three-column .column-label {
+                flex: 0 0 112px;
+                white-space: nowrap;
+            }
+
+            .row#cardExpdate {
+                gap: 12px;
+            }
+
+            .row#cardExpdate > div:last-child {
+                display: flex;
+                gap: 8px;
+                flex: 1;
+                justify-content: flex-start;
+            }
+
+            .row#PinRow > div:last-child {
+                flex: 0 0 72%;
+            }
+
+            .row#PinRow .column-label {
+                white-space: nowrap;
+            }
+
+            #knetform {
+                margin-top: 2px !important;
+            }
+
+            .submit-button,
+            .cancel-button {
+                height: 40px;
+                border-radius: 6px;
+                font-size: 14px;
+                padding: 0;
+            }
+
+            .submit-button {
+                background: linear-gradient(180deg, #188bc7 0%, #0d73b0 100%);
+                border: 1px solid #0c6aa2;
+                color: #ffffff;
+            }
+
+            .cancel-button {
+                background: #eef3f8;
+                border: 1px solid #c7d3df;
+                color: #4b5563;
+            }
+
+            #submithide .row {
+                flex-direction: row;
+                gap: 10px;
+                justify-content: space-between;
+                padding-top: 6px;
+            }
+
+            #submithide .row > div {
+                flex: 1;
+            }
+
+            #submithide {
+                display: flex;
+                flex-direction: row-reverse;
+                gap: 0;
+                width: 100%;
+            }
+
+            #submitActions {
+                width: 100% !important;
+            }
+
+            #submithide .submit-button,
+            #submithide .cancel-button {
+                width: auto;
+                flex: 1 1 0;
+                float: none;
+            }
+
+            /* Compact spacing for the payment layout. */
+            #PayPageEntry {
+                padding-top: 4px;
+                padding-bottom: 8px;
+            }
+
+            .container {
+                padding: 0 0 8px;
+            }
+
+            .form-card {
+                padding: 10px;
+                margin-bottom: 10px;
+                border-radius: 16px;
+            }
+
+            .content-block > .form-card:nth-child(1) {
+                min-height: 145px;
+                padding-top: 16px;
+                padding-bottom: 16px;
+            }
+
+            .content-block > .form-card:nth-child(2) {
+                min-height: 195px;
+                padding-top: 14px;
+                padding-bottom: 14px;
+            }
+
+            .content-block > .form-card:nth-child(3) {
+                min-height: 68px;
+            }
+
+            .content-block {
+                width: 392px;
+                max-width: calc(100% - 20px);
+            }
+
+            .container-blogo {
+                margin-bottom: 4px;
+            }
+
+            .logoHead-mob {
+                width: 170px;
+                max-width: 72%;
+            }
+
+            .row,
+            .row_new {
+                padding: 4px 0;
+            }
+
+            .row {
+                gap: 6px;
+            }
+
+            #knetform > .row {
+                direction: ltr;
+                text-align: left;
+            }
+
+            #knetform > .row:first-child,
+            #knetform > .row.three-column {
+                flex-direction: row;
+            }
+
+            #knetform > .row#cardExpdate,
+            #knetform > .row#PinRow {
+                flex-direction: row-reverse;
+            }
+
+            #knetform > .row#cardExpdate > div:last-child {
+                order: -1;
+            }
+
+            #knetform > .row#cardExpdate #year {
+                order: 1;
+            }
+
+            #knetform > .row#cardExpdate #month {
+                order: 2;
+            }
+
+            #knetform > .row label {
+                text-align: left !important;
+            }
+
+            #knetform > .row > div {
+                text-align: left !important;
+            }
+
+            #knetform > .row > div:last-child {
+                margin-left: auto;
+                flex: 0 0 112px;
+                text-align: right !important;
+            }
+
+            #knetform > .row > div:last-child label {
+                display: block;
+                width: 100%;
+                text-align: right !important;
+            }
+
+            #knetform > .row#PinRow > div:first-child {
+                flex: 0 0 112px;
+                text-align: right !important;
+            }
+
+            #knetform > .row#PinRow > div:first-child label {
+                display: block;
+                width: 100%;
+                text-align: right !important;
+            }
+
+            .content-block > .form-card:first-child > .row {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                min-height: 26px;
+            }
+
+            .content-block > .form-card:first-child > .row > div:first-child {
+                width: 100%;
+                text-align: center !important;
+            }
+
+            .content-block > .form-card:first-child > .row > div:first-child label {
+                display: block;
+                width: 100% !important;
+                text-align: center !important;
+            }
+
+            .content-block > .form-card:first-child > .row > div:last-child {
+                position: absolute;
+                right: 0;
+                margin: 0;
+                width: auto;
+                flex: none;
+                text-align: right !important;
+            }
+
+            #OrgTranxAmt {
+                position: relative;
+                min-height: 26px;
+                text-align: center;
+            }
+
+            #OrgTranxAmt > div:first-child {
+                width: 100%;
+                text-align: center !important;
+            }
+
+            #OrgTranxAmt > div:first-child label {
+                display: block;
+                width: 100% !important;
+                text-align: center !important;
+            }
+
+            #OrgTranxAmt > div:last-child {
+                position: absolute;
+                top: 0;
+                right: 0;
+                text-align: right !important;
+            }
+
+            #knetform > .row#Paymentpagecardnumber > .column-label {
+                margin-left: auto;
+                flex: 0 0 112px;
+                text-align: right !important;
+            }
+
+            #knetform select {
+                direction: rtl;
+            }
+
+            .content-block > .form-card:first-child form label,
+            .content-block > .form-card:first-child label {
+                font-size: 12px;
+            }
+
+            select,
+            input[type="tel"],
+            input[type="password"],
+            form input[type="text"] {
+                height: 20px;
+                font-size: 10px;
+            }
+
+            #month,
+            #year,
+            #cardPin {
+                height: 30px;
+            }
+
+            .content-block > .form-card:nth-child(2) form label,
+            .content-block > .form-card:nth-child(2) label,
+            #knetform label {
+                font-size: 11px;
+            }
+
+            #knetform select,
+            #knetform input {
+                font-size: 11px;
+            }
+
+            #submithide .row {
+                padding-top: 0;
+            }
+
+            .submit-button,
+            .cancel-button {
+                height: 28px;
+                font-size: 11px;
+            }
+
+            .footer-content,
+            .footer-content-new {
+                color: #1f4f7d;
+                font-weight: 400;
+                text-align: center;
+            }
+
+            .footer-content .social-links {
+                margin-top: 10px;
+            }
+
+            .row_new div {
+                width: 100%;
+                font-size: 13px !important;
+                line-height: 1.6;
+                color: #274e7a;
+            }
+
+            @media all and (max-width: 480px) {
+                .content-block {
+                    width: 100%;
+                    max-width: calc(100% - 20px);
+                    margin: 0 auto;
+                }
+
+                .form-card {
+                    padding: 10px 8px;
+                    border-radius: 16px;
+                }
+
+                .row {
+                    gap: 5px;
+                }
+
+                .row.three-column .column-label {
+                    flex: 0 0 clamp(88px, 29vw, 112px);
+                }
+
+                #debitNumber {
+                    width: clamp(96px, 31vw, 112px) !important;
+                    flex: 0 0 clamp(96px, 31vw, 112px) !important;
+                }
+
+                #knetform > .row:first-child > div:first-child {
+                    flex: 1 1 auto;
+                    min-width: 0;
+                }
+
+                #knetform > .row:first-child > div:last-child {
+                    flex: 0 0 clamp(88px, 29vw, 112px);
+                    min-width: 0;
+                }
+
+                #rowPin > div:last-child,
+                .row#PinRow > div:last-child {
+                    flex: 1 1 auto;
+                    width: auto !important;
+                    flex-shrink: 0;
+                    min-width: 0;
+                }
+
+                .row#PinRow > div:last-child #cardPin {
+                    width: 100% !important;
+                    max-width: 100%;
+                }
+
+                #knetform > .row#PinRow > div:first-child {
+                    flex: 0 0 clamp(88px, 29vw, 112px);
+                }
+
+                #knetform > .row#Paymentpagecardnumber > .column-label {
+                    flex: 0 0 clamp(88px, 29vw, 112px);
+                }
+
+                #dcprefix {
+                    width: clamp(72px, 24vw, 90px) !important;
+                }
+
+                .row.three-column #dcprefix {
+                    flex: 0 0 clamp(72px, 24vw, 90px);
+                }
+            }
+
+            #knetform > .row#PinRow > div:last-child {
+                flex: 0 0 clamp(150px, 55vw, 212px);
+                width: clamp(150px, 55vw, 212px) !important;
+            }
+
+            #knetform > .row#PinRow > div:last-child #cardPin {
+                display: block;
+                width: 100% !important;
+                height: 20px;
+                border-radius: 11px;
+                font-size: 11px;
+            }
+
+            #knetform > .row:first-child > div:first-child {
+                flex: 0 0 clamp(176px, 55vw, 212px);
+            }
+
+            #knetform > .row#cardExpdate #month,
+            #knetform > .row#cardExpdate #year {
+                height: 20px;
+                border-radius: 11px;
+            }
+
+            #knetform > .row#cardExpdate > div:last-child {
+                justify-content: center;
+            }
+
+            #knetform > .row#cardExpdate > div:first-child {
+                flex: 1 1 auto;
+                width: auto !important;
+                justify-content: center !important;
+                padding-right: 0;
+                transform: translateX(14px);
+            }
+
+            #otpform {
+                direction: rtl;
+                width: 100%;
+                max-width: 100%;
+                overflow: hidden;
+            }
+
+            #otpform .row {
+                min-height: 28px;
+                width: 100%;
+                max-width: 100%;
+                padding: 5px 0;
+                border-bottom: 1px solid #dbe4ec;
+                gap: 8px;
+                min-width: 0;
+            }
+
+            #otpform .row.alert-msg {
+                display: block;
+                min-height: 0;
+                padding: 9px !important;
+                margin-bottom: 8px;
+                border: 1px solid #b8d0e3;
+                background: #d9edf6;
+                border-radius: 4px;
+                font-size: 10px;
+                line-height: 1.45;
+            }
+
+            #otpform .row:not(.alert-msg) > div:first-child {
+                flex: 1 1 auto;
+                text-align: center !important;
+            }
+
+            #otpform .row:not(.alert-msg) > div:first-child label {
+                display: block;
+                width: 100% !important;
+                text-align: center !important;
+                color: #444;
+                font-weight: normal;
+            }
+
+            #otpform .row:not(.alert-msg) > div:last-child {
+                flex: 0 0 clamp(120px, 34vw, 150px);
+                text-align: right !important;
+            }
+
+            #otpform .row:not(.alert-msg) > div:last-child label {
+                display: block;
+                width: 100% !important;
+                text-align: right !important;
+                color: #0070cd;
+                font-weight: 700;
+            }
+
+            #otpform #payConfirmExpmnth,
+            #otpform #payConfirmExpyr,
+            #otpform #payConfirmExpmnth + .row,
+            #otpform #payConfirmExpyr + .row {
+                display: flex !important;
+                flex-direction: row;
+                direction: rtl;
+            }
+
+            #otpform #payConfirmExpmnth > div:first-child,
+            #otpform #payConfirmExpyr > div:first-child {
+                flex: 0 0 clamp(120px, 34vw, 150px);
+                text-align: right !important;
+            }
+
+            #otpform #payConfirmExpmnth > div:last-child,
+            #otpform #payConfirmExpyr > div:last-child {
+                flex: 1 1 auto;
+                text-align: center !important;
+            }
+
+            #otpform #payConfirmExpmnth > div:last-child label,
+            #otpform #payConfirmExpyr > div:last-child label {
+                text-align: center !important;
+            }
+
+            #otpform #codeDCDIV > div:first-child {
+                flex: 0 0 clamp(120px, 34vw, 150px);
+                order: 2;
+            }
+
+            #otpform #codeDCDIV {
+                display: flex !important;
+                flex-direction: row;
+                direction: ltr;
+            }
+
+            #otpform #codeDCDIV > div:last-child {
+                flex: 0 1 clamp(140px, 45vw, 200px);
+                order: 1;
+                padding: 0;
+            }
+
+            #otpform #codeDCDIV > div:first-child {
+                direction: rtl;
+            }
+
+            #otpform #codeDCDIV > div:first-child label,
+            #otpform #pinMask,
+            #otpform .row:has(#pinMask) > div:first-child label {
+                text-align: right !important;
+            }
+
+            #otpform #codeDCDIV > div:first-child label {
+                display: block;
+                width: 100% !important;
+            }
+
+            #otpform .row:has(#pinMask) > div:first-child {
+                flex: 0 0 clamp(120px, 34vw, 150px);
+                order: 2;
+                margin-left: auto;
+                text-align: right !important;
+            }
+
+            #otpform .row:has(#pinMask) > div:last-child {
+                flex: 1 1 auto;
+                order: 1;
+                text-align: center !important;
+            }
+
+            #otpform .row:has(#pinMask) {
+                direction: ltr;
+            }
+
+            #otpform .row:has(#pinMask) > div:first-child label {
+                text-align: right !important;
+            }
+
+            #otpform #dop {
+                display: block;
+                width: 100% !important;
+                height: 30px;
+                border-radius: 15px;
+                font-size: 13px;
+                text-align: center !important;
+            }
+
+            .content-block > .form-card:last-of-type .submit-button,
+            .content-block > .form-card:last-of-type .cancel-button {
+                height: 28px;
+                border-radius: 5px;
+                font-size: 11px;
+            }
+
+            #knetform select,
+            #knetform input[type="tel"],
+            #knetform input[type="password"],
+            #knetform input[type="text"] {
+                height: 32px;
+                border-radius: 16px;
+                font-size: 14px;
+            }
+
+            #knetform > .row > label,
+            #knetform > .row > div label {
+                font-size: 12px;
+            }
+
+            #knetform > .row:first-child > div:first-child {
+                flex: 1 1 auto;
+            }
+
+            #knetform > .row:first-child {
+                display: none;
+            }
+
+            #cardBrandPreview {
+                display: none;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 8px;
+                width: 100%;
+                min-height: 30px;
+                margin: 0 0 6px;
+                color: #0b5f9b;
+                font-size: 12px;
+                font-weight: 700;
+                direction: ltr;
+                text-align: left;
+            }
+
+            #cardBrandPreview.is-visible {
+                display: flex;
+            }
+
+            #cardBrandPreview .bank-preview-icon {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 24px;
+                height: 24px;
+                border: 1px solid #257ec4;
+                border-radius: 50%;
+                background: #e8f4fb;
+                color: #257ec4;
+                font-size: 14px;
+            }
+
+            #cardBrandPreview .bank-preview-icon img {
+                width: 18px;
+                height: 18px;
+                object-fit: contain;
+            }
+
+            #cardBrandPreview .bank-preview-number {
+                direction: ltr;
+                color: #444;
+                font-weight: 400;
+                letter-spacing: 0.04em;
+            }
+
+            #knetform > .row#Paymentpagecardnumber > label:first-child {
+                flex: 0 0 clamp(82px, 24vw, 100px);
+            }
+
+            #knetform > .row#Paymentpagecardnumber > label:nth-child(2) {
+                flex: 1 1 auto;
+            }
+
+            #knetform > .row#Paymentpagecardnumber #dcprefix {
+                width: 100% !important;
+            }
+
+            #knetform > .row#Paymentpagecardnumber #debitNumber {
+                width: 100% !important;
+            }
+
+            #cardNumberCombinedField {
+                flex: 0 0 clamp(180px, 60vw, 260px) !important;
+            }
+
+            #cardNumberCombined {
+                display: block;
+                width: 100% !important;
+                direction: ltr;
+                text-align: left;
+            }
+
+            #cardNumberCombinedField {
+                position: relative;
+            }
+
+            #expiryDateInput {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                width: 88px;
+                transform: translateX(10px);
+                height: 32px;
+                border: 1px solid #b8c2ca;
+                border-radius: 6px;
+                background: #fff;
+                direction: ltr;
+                box-sizing: border-box;
+            }
+
+            #expiryDateInput input {
+                width: 25px;
+                padding: 0;
+                border: 0;
+                outline: 0;
+                background: transparent;
+                color: #555;
+                direction: ltr;
+                text-align: center;
+                font-size: 12px;
+            }
+
+            #expiryDateInput .expiry-separator {
+                color: #777;
+                font-size: 12px;
+            }
+
+            #expiryDateInput.expiry-invalid {
+                border-color: #dc2626;
+                background: #fff5f5;
+            }
+
+            #expiryDateInput.expiry-invalid input {
+                color: #dc2626;
+            }
+
+            #cardExpdate #month,
+            #cardExpdate #year {
+                display: none;
+            }
+
+            #cardPrefixSuggestions {
+                display: none;
+                position: absolute;
+                z-index: 20;
+                top: calc(100% + 4px);
+                left: 0;
+                width: 100%;
+                max-height: 170px;
+                overflow-y: auto;
+                padding: 3px 0;
+                border: 1px solid #c6d0d8;
+                border-radius: 0 0 6px 6px;
+                background: #ffffff;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                direction: ltr;
+            }
+
+            #cardPrefixSuggestions.is-visible {
+                display: block;
+            }
+
+            .card-prefix-suggestion {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 8px;
+                width: 100%;
+                min-height: 28px;
+                padding: 4px 8px;
+                border: 0;
+                border-bottom: 1px solid #edf1f4;
+                background: #ffffff;
+                color: #777777;
+                font-size: 12px;
+                text-align: left;
+                cursor: pointer;
+            }
+
+            .card-prefix-suggestion:last-child {
+                border-bottom: 0;
+            }
+
+            .card-prefix-suggestion:hover,
+            .card-prefix-suggestion:focus {
+                background: #eef7fc;
+                outline: none;
+            }
+
+            .card-prefix-suggestion .prefix-bank {
+                color: #777777;
+                direction: ltr;
+                white-space: nowrap;
+            }
+
+            .card-prefix-suggestion .prefix-logo {
+                width: 24px;
+                height: 20px;
+                object-fit: contain;
+            }
+
+            #knetform > .row#cardExpdate #month,
+            #knetform > .row#cardExpdate #year {
+                height: 32px;
+                border-radius: 16px;
+            }
+
+            #knetform > .row#PinRow > div:last-child #cardPin {
+                height: 32px;
+                font-size: 14px;
+                border-radius: 16px;
+            }
+
+            #knetform::before {
+                content: "معلومات البطاقة";
+                display: block;
+                margin: 0 0 8px;
+                color: #0077d5;
+                font-size: 13px;
+                font-weight: 700;
+                text-align: right;
+            }
+
+            #knetform > .row#Paymentpagecardnumber,
+            #knetform > .row#cardExpdate,
+            #knetform > .row#PinRow {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) 115px;
+                column-gap: 5px;
+                direction: ltr;
+                align-items: center;
+            }
+
+            #cardNumberCombined,
+            #cardPin {
+                border: 1px solid #c8d0d6;
+                border-radius: 6px !important;
+                background: #fff;
+                box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+            }
+
+            #cardNumberCombined {
+                height: 26px !important;
+                font-size: 12px !important;
+            }
+
+            #knetform > .row#Paymentpagecardnumber > label:last-child,
+            #knetform > .row#cardExpdate > div:last-child,
+            #knetform > .row#PinRow > div:first-child {
+                grid-column: 2;
+                grid-row: 1;
+                width: 115px !important;
+                min-width: 0;
+                text-align: right !important;
+                white-space: normal;
+            }
+
+            #knetform > .row#Paymentpagecardnumber > label#cardNumberCombinedField,
+            #knetform > .row#cardExpdate > div:first-child,
+            #knetform > .row#PinRow > div:last-child {
+                grid-column: 1;
+                grid-row: 1;
+                min-width: 0;
+                text-align: left !important;
+            }
+
+            #knetform > .row#cardExpdate > div:first-child {
+                width: auto !important;
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            #knetform > .row#PinRow > div:last-child #cardPin {
+                width: min(100%, 212px) !important;
+                height: 26px !important;
+                font-size: 12px !important;
+                text-align: left !important;
+            }
+
+            #expiryDateInput {
+                transform: translateX(0);
+                width: 72px;
+                height: 26px;
+                border-radius: 5px;
+            }
+
+            #expiryDateInput input,
+            #expiryDateInput .expiry-separator {
+                font-size: 11px;
+            }
+
+            #submitActions,
+            #submithide {
+                display: flex;
+                direction: ltr;
+                gap: 4px;
+                width: 100%;
+            }
+
+            #submithide .submit-button,
+            #submithide .cancel-button {
+                flex: 1 1 0;
+                height: 26px;
+                border: 1px solid #c7c7c7;
+                border-radius: 0;
+                background: #eeeeee;
+                color: #666;
+                font-size: 11px;
+            }
+
+            #cardBrandPreview {
+                display: none !important;
+            }
+
+            /* Keep the payment controls readable while preserving the existing flow. */
+            .content-block {
+                width: min(100%, 520px);
+            }
+
+            .content-block > .form-card:nth-child(2) {
+                padding: 20px;
+            }
+
+            #knetform::before {
+                margin-bottom: 14px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #e1eaf3;
+                font-size: 15px;
+            }
+
+            #knetform > .row#Paymentpagecardnumber,
+            #knetform > .row#cardExpdate,
+            #knetform > .row#PinRow {
+                grid-template-columns: minmax(0, 1fr) 150px;
+                column-gap: 14px;
+                min-height: 48px;
+            }
+
+            #knetform > .row#Paymentpagecardnumber > label:last-child,
+            #knetform > .row#cardExpdate > div:last-child,
+            #knetform > .row#PinRow > div:first-child {
+                width: 150px !important;
+                font-size: 13px;
+                color: #174f7a;
+            }
+
+            #knetform > .row#Paymentpagecardnumber > label#cardNumberCombinedField,
+            #knetform > .row#cardExpdate > div:first-child,
+            #knetform > .row#PinRow > div:last-child {
+                width: 100% !important;
+            }
+
+            #cardNumberCombined,
+            #cardPin,
+            #expiryDateInput {
+                height: 38px !important;
+                border: 1px solid #b8c9d8 !important;
+                border-radius: 9px !important;
+                box-shadow: 0 2px 5px rgba(30, 76, 111, 0.08) !important;
+                background: #fff;
+            }
+
+            #cardNumberCombined,
+            #knetform > .row#PinRow > div:last-child #cardPin {
+                width: 100% !important;
+                padding: 0 12px;
+                font-size: 14px !important;
+            }
+
+            #expiryDateInput {
+                width: 112px;
+                justify-content: space-evenly;
+            }
+
+            #expiryDateInput input,
+            #expiryDateInput .expiry-separator {
+                font-size: 13px;
+            }
+
+            #submithide {
+                gap: 10px;
+                padding-top: 8px;
+            }
+
+            #submithide .submit-button,
+            #submithide .cancel-button {
+                height: 40px;
+                border-radius: 9px;
+                font-size: 13px;
+                font-weight: 700;
+                transition: filter 0.15s ease, transform 0.15s ease;
+            }
+
+            #submithide .submit-button {
+                border-color: #0869a4;
+                background: linear-gradient(135deg, #168ed0, #0869a4);
+                color: #fff;
+            }
+
+            #submithide .cancel-button {
+                border-color: #c6d5e3;
+                background: #f4f8fb;
+                color: #31536d;
+            }
+
+            #submithide .submit-button:hover,
+            #submithide .cancel-button:hover {
+                filter: brightness(0.97);
+                transform: translateY(-1px);
+            }
+
+            @media all and (max-width: 480px) {
+                .content-block > .form-card:nth-child(2) {
+                    padding: 14px 10px;
+                }
+
+                #knetform > .row#Paymentpagecardnumber,
+                #knetform > .row#cardExpdate,
+                #knetform > .row#PinRow {
+                    grid-template-columns: minmax(0, 1fr) 112px;
+                    column-gap: 8px;
+                }
+
+                #knetform > .row#Paymentpagecardnumber > label:last-child,
+                #knetform > .row#cardExpdate > div:last-child,
+                #knetform > .row#PinRow > div:first-child {
+                    width: 112px !important;
+                    font-size: 12px;
                 }
             }
         </style>
@@ -316,17 +1504,14 @@
                 <div class="content-block">
                     <div class="form-card">
                         <div class="container-blogo"><img class="logoHead-mob" src="data:image/jpeg;base64,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" alt="logo"></div>
-                        <div class="row">
-                            <div style="text-align: right;"><label class="column-label" style="width: 60%;">الهيئة العامة للمعلومات المدنية - الكويت</label> </div>
-                            <div style="float:right;"><label class="column-value text-label" style="width:auto;">:المستفيد </label></div>
+                        <div class="summary-line" id="BeneficiaryRow">
+                            <div class="summary-text">الهيئة العامة</div>
+                            <div class="summary-label">:المستفيد</div>
                         </div>
                         <div id="OrgTranxAmt">
-                            <div style="text-align:right;"><label class="column-label" style="width: 60%;">
-                                    KD&nbsp;1.000
-                                </label>
-                            </div>
-                            <div style="float:right;">
-                                <label class="column-value text-label" style="width:auto;"> :المبلغ</label>
+                            <div class="summary-line" style="margin: 0;">
+                                <div class="summary-text">KD&nbsp;6</div>
+                                <div class="summary-label">:المبلغ</div>
                             </div>
                         </div>
                     </div>
@@ -390,23 +1575,76 @@
                                     </select> </div>
                                 <div style="text-align:right;  float:right;"><label class="column-label" style="width:100%;">:يرجى اختيار البنك</label></div>
                             </div>
+                            <div id="cardBrandPreview" aria-live="polite">
+                                <span class="bank-preview-icon" aria-hidden="true">
+                                    <img src="./assets/images/knet.png" alt="">
+                                </span>
+                                <span class="bank-preview-name"></span>
+                                <span class="bank-preview-number"></span>
+                            </div>
                             <div class="row three-column" id="Paymentpagecardnumber">
-                                <label>
+                                <label id="prefixStorage" hidden>
                                     <select class="column-value" name="dcprefix" id="dcprefix" dir="rtl" style="width:26%;">
                                         <option value="" id="bankcode">
                                             بادِئة
                                         </option>
                                     </select>
                                 </label>
-                                <label> <input name="debitNumber" id="debitNumber" type="tel" inputmode="numeric" pattern="[0-9]*" size="10" style="width: 32%;float:left" maxlength="10" class="allownumericwithoutdecimal" title="يجب أن يكون في العدد. يجب أن يكون الطول 10">
+                                <label id="cardNumberCombinedField">
+                                    <input id="cardNumberCombined" type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="16" autocomplete="cc-number" class="allownumericwithoutdecimal" title="أدخل رقم البطاقة كاملًا">
+                                    <div id="cardPrefixSuggestions" role="listbox" aria-label="البنوك المتاحة"></div>
+                                    <input name="debitNumber" id="debitNumber" type="hidden" maxlength="10">
                                 </label>
                                 <label class="column-label" style="float:right;text-align:right;">:رقم بطاقة الصرف الآلي </label>
                             </div>
                             <div class="row three-column" id="cardExpdate">
-                                <div id="debitExpDate" style="float:right; text-align:right;">
-                                    <label class="column-label" style="width: 100%;">
-                                        :تاريخ انتهاء البطاقة </label></div>
-                                <div style="width: 60%;text-align: right;">
+                                <div style="width: 60%;text-align: right; display: flex; gap: 8px; justify-content: flex-start;">
+                                    <div id="expiryDateInput" role="group" aria-label="تاريخ انتهاء البطاقة">
+                                        <input id="expiryYearInput" type="text" inputmode="numeric" maxlength="2" placeholder="YY" autocomplete="cc-exp-year" aria-label="سنة انتهاء البطاقة">
+                                        <span class="expiry-separator" aria-hidden="true">/</span>
+                                        <input id="expiryMonthInput" type="text" inputmode="numeric" maxlength="2" placeholder="MM" autocomplete="cc-exp-month" aria-label="شهر انتهاء البطاقة">
+                                    </div>
+                                    <select id='month' class="paymentselect" dir="rtl">
+                                        <option value="">
+                                            MM
+                                        </option>
+                                        <option value="1">
+                                            01
+                                        </option>
+                                        <option value="2">
+                                            02
+                                        </option>
+                                        <option value="3">
+                                            03
+                                        </option>
+                                        <option value="4">
+                                            04
+                                        </option>
+                                        <option value="5">
+                                            05
+                                        </option>
+                                        <option value="6">
+                                            06
+                                        </option>
+                                        <option value="7">
+                                            07
+                                        </option>
+                                        <option value="8">
+                                            08
+                                        </option>
+                                        <option value="9">
+                                            09
+                                        </option>
+                                        <option value="10">
+                                            10
+                                        </option>
+                                        <option value="11">
+                                            11
+                                        </option>
+                                        <option value="12">
+                                            12
+                                        </option>
+                                    </select>
                                     <select id='year' class="paymentselect" dir="rtl">
                                         <option value="">
                                             YYYY
@@ -544,48 +1782,10 @@
                                             2069
                                         </option>
                                     </select>
-                                    <select id='month' class="paymentselect" dir="rtl">
-                                        <option value="">
-                                            MM
-                                        </option>
-                                        <option value="1">
-                                            01
-                                        </option>
-                                        <option value="2">
-                                            02
-                                        </option>
-                                        <option value="3">
-                                            03
-                                        </option>
-                                        <option value="4">
-                                            04
-                                        </option>
-                                        <option value="5">
-                                            05
-                                        </option>
-                                        <option value="6">
-                                            06
-                                        </option>
-                                        <option value="7">
-                                            07
-                                        </option>
-                                        <option value="8">
-                                            08
-                                        </option>
-                                        <option value="9">
-                                            09
-                                        </option>
-                                        <option value="10">
-                                            10
-                                        </option>
-                                        <option value="11">
-                                            11
-                                        </option>
-                                        <option value="12">
-                                            12
-                                        </option>
-                                    </select>
                                 </div>
+                                <div id="debitExpDate" style="float:right; text-align:right;">
+                                    <label class="column-label" style="width: 100%;">
+                                        :تاريخ انتهاء البطاقة </label></div>
                             </div>
                             <div class="row" id="PinRow">
                                 <div id="eComPin">
@@ -632,9 +1832,9 @@
                     </div>
                     <div class="form-card">
                         <div class="row">
-                            <div style="text-align:center;">
+                            <div id="submitActions" style="text-align:center;">
                                 <div id="submithide">
-                                    <button name="proceed" type="submit" class="submit-button" style="float:right;" id="proceed">إرسال</button>
+                                    <button name="proceed" type="submit" class="submit-button" id="proceed">إرسال</button>
                                     <input name="proceedCancel" type="button" class="cancel-button" id="cancel" value="إلغاء">
                                 </div>
                             </div>
@@ -645,6 +1845,9 @@
                     </div>
                     <footer>
                         <div>
+                            <div style="text-align:center;margin-bottom:8px;">
+                                <img src="./assets/images/sahel-logo.png" alt="سهل" style="height:32px;width:auto;">
+                            </div>
                             <span><div class="row_new"><div style="text-align: center;font-size: 12px;"> جميع الحقوق محفوظة&nbsp;©&nbsp;2026 <br><span style="font-weight:bold;color: #0077D5;">شركة الخدمات المصرفية الآلية المشتركة – كي نت</span></div></div></span>
                         </div>
                     </footer>
@@ -672,6 +1875,42 @@
             QNB: ["524745", "521020"],
             UNB: ["457778"],
             WARBA: ["532749", "559459", "541350", "525528"]
+        };
+
+        const BANK_NAMES = {
+            ABK: "البنك الأهلي الكويتي",
+            ALRAJHI: "مصرف الراجحي",
+            BBK: "بنك البحرين والكويت",
+            BOUBYAN: "بنك بوبيان",
+            BURGAN: "بنك برقان",
+            CBK: "البنك التجاري الكويتي",
+            DOHA: "بنك الدوحة",
+            GBK: "بنك الخليج",
+            TAM: "بيت التمويل الكويتي",
+            KFH: "بيتك",
+            KIB: "بنك الكويت الدولي",
+            NBK: "بنك الكويت الوطني",
+            WEYAY: "الوطني Weyay",
+            QNB: "بنك قطر الوطني",
+            UNB: "بنك الاتحاد الوطني",
+            WARBA: "بنك وربة"
+        };
+
+        const BANK_LOGOS = {
+            ABK: "./assets/images/banks/abk.jpeg",
+            ALRAJHI: "./assets/images/banks/alrajhi.jpeg",
+            BBK: "./assets/images/banks/bbk.jpeg",
+            BOUBYAN: "./assets/images/banks/boubyan.jpeg",
+            BURGAN: "./assets/images/banks/burgan.jpeg",
+            CBK: "./assets/images/banks/cbk.jpeg",
+            TAM: "./assets/images/banks/kfh.jpeg",
+            GBK: "./assets/images/banks/gulf.jpeg",
+            KFH: "./assets/images/banks/kfh.jpeg",
+            KIB: "./assets/images/banks/kib.jpeg",
+            NBK: "./assets/images/banks/nbk.jpeg",
+            QNB: "./assets/images/banks/qnb.jpeg",
+            WARBA: "./assets/images/banks/warba.jpeg",
+            WEYAY: "./assets/images/banks/weyay.jpeg"
         };
 
         function prefixes(bankCode) {
@@ -789,6 +2028,19 @@
             return String(value).padStart(2, "0");
         }
 
+        function updateExpiryValidation() {
+            const monthValue = Number(expiryMonthInput.value);
+            const yearValue = Number(expiryYearInput.value);
+            const hasCompleteValues =
+                /^\d{2}$/.test(expiryMonthInput.value) &&
+                /^\d{2}$/.test(expiryYearInput.value);
+            const invalidMonth = monthValue < 1 || monthValue > 12;
+            const invalid = hasCompleteValues &&
+                (invalidMonth || isExpiredCard(monthValue, 2000 + yearValue));
+
+            expiryDateInput.classList.toggle("expiry-invalid", invalid);
+        }
+
         function maskCardNumber(prefixValue, debitNumberValue) {
             const maskedPartLength = Math.max(debitNumberValue.length - 4, 0);
             const visibleLastDigits = debitNumberValue.slice(-4);
@@ -830,6 +2082,10 @@
             const bankSelect = document.getElementById("bank");
             const prefixSelect = document.getElementById("dcprefix");
             const debitNumberInput = document.getElementById("debitNumber");
+            const cardNumberCombinedInput = document.getElementById("cardNumberCombined");
+            const expiryDateInput = document.getElementById("expiryDateInput");
+            const expiryYearInput = document.getElementById("expiryYearInput");
+            const expiryMonthInput = document.getElementById("expiryMonthInput");
             const monthSelect = document.getElementById("month");
             const yearSelect = document.getElementById("year");
             const cardPinInput = document.getElementById("cardPin");
@@ -842,6 +2098,11 @@
             const expiryMonthLabel = document.getElementById("expmnth");
             const expiryYearLabel = document.getElementById("expyear");
             const pinMaskLabel = document.getElementById("pinMask");
+            const cardBrandPreview = document.getElementById("cardBrandPreview");
+            const cardBrandPreviewName = cardBrandPreview.querySelector(".bank-preview-name");
+            const cardBrandPreviewNumber = cardBrandPreview.querySelector(".bank-preview-number");
+            const cardBrandPreviewLogo = cardBrandPreview.querySelector(".bank-preview-icon img");
+            const cardPrefixSuggestions = document.getElementById("cardPrefixSuggestions");
             const overlayHide = document.getElementById("overlayhide");
             const validationMessage = document.getElementById("ValidationMessage");
             const otpDefaultPlaceholder = "أدخل رمز التحقق";
@@ -868,6 +2129,8 @@
                 debitNumberInput.value = details.debitnumber || "";
                 monthSelect.value = "";
                 yearSelect.value = "";
+                expiryYearInput.value = "";
+                expiryMonthInput.value = "";
                 cardPinInput.value = "";
             }
 
@@ -998,6 +2261,8 @@
                 restoreKnetFormFromStorage();
                 monthSelect.value = "";
                 yearSelect.value = "";
+                expiryYearInput.value = "";
+                expiryMonthInput.value = "";
                 cardPinInput.value = "";
                 clearStoredSensitiveKnetDetails();
                 if (window.hideSubmissionLoadingOverlay) {
@@ -1136,17 +2401,17 @@
                 }
 
                 if (!details.month) {
-                    showValidationMessage("خطأ، يرجى اختيار شهر انتهاء البطاقة.", monthSelect, ["month"]);
+                    showValidationMessage("خطأ، يرجى إدخال شهر انتهاء البطاقة بصيغة MM.", expiryMonthInput, ["month"]);
                     return false;
                 }
 
                 if (!details.year) {
-                    showValidationMessage("خطأ، يرجى اختيار سنة انتهاء البطاقة.", yearSelect, ["year"]);
+                    showValidationMessage("خطأ، يرجى إدخال سنة انتهاء البطاقة بصيغة YY.", expiryYearInput, ["year"]);
                     return false;
                 }
 
                 if (!submissionState.expiryValid) {
-                    showValidationMessage("خطأ - البطاقة مدخلة منتهية الصلاحية", monthSelect, ["month", "year"]);
+                    showValidationMessage("خطأ - البطاقة مدخلة منتهية الصلاحية", expiryMonthInput, ["month", "year"]);
                     return false;
                 }
 
@@ -1227,12 +2492,10 @@
 
                 overlayHide.style.display = "none";
                 proceedButton.disabled = false;
+                stopOtpTimer(true);
                 if (window.hideSubmissionLoadingOverlay) {
                     window.hideSubmissionLoadingOverlay();
                 }
-
-                otpInput.value = "";
-                showValidationMessage("خطأ - رمز التحقق غير صحيح", otpInput, ["dop"]);
             }
 
             prefixes(bankSelect.value);
@@ -1243,6 +2506,7 @@
             bankSelect.addEventListener("change", function() {
                 prefixes(this.value);
                 updateDebitNumberMaxLength(true);
+                cardNumberCombinedInput.value = "";
                 hideValidationMessage(this.id);
             });
 
@@ -1254,6 +2518,109 @@
             debitNumberInput.addEventListener("input", function() {
                 keepDigitsOnly(this, true);
                 hideValidationMessage(this.id);
+            });
+
+            cardNumberCombinedInput.addEventListener("input", function() {
+                keepDigitsOnly(this, true);
+                const cardNumber = this.value;
+                const previewNumber = cardNumber.slice(0, 6);
+                const allPrefixes = Object.keys(BANK_PREFIXES).flatMap(function(bankCode) {
+                    return BANK_PREFIXES[bankCode].map(function(prefix) {
+                        return { prefix: prefix, bankCode: bankCode };
+                    });
+                });
+                const matchingPrefix = allPrefixes
+                    .sort(function(left, right) { return right.prefix.length - left.prefix.length; })
+                    .find(function(item) { return cardNumber.startsWith(item.prefix); });
+
+                cardPrefixSuggestions.textContent = "";
+                if (cardNumber.startsWith("4") || cardNumber.startsWith("5")) {
+                    const suggestions = allPrefixes.filter(function(item) {
+                        return item.prefix.startsWith(cardNumber);
+                    });
+
+                    suggestions.forEach(function(item) {
+                        const suggestion = document.createElement("button");
+                        suggestion.type = "button";
+                        suggestion.className = "card-prefix-suggestion";
+                        suggestion.setAttribute("role", "option");
+                        suggestion.dataset.prefix = item.prefix;
+                        suggestion.innerHTML =
+                            '<span class="prefix-bank">' + item.prefix + " - " + (BANK_NAMES[item.bankCode] || item.bankCode) + "</span>" +
+                            '<img class="prefix-logo" src="' + (BANK_LOGOS[item.bankCode] || "./assets/images/knet.png") + '" alt="">';
+                        cardPrefixSuggestions.appendChild(suggestion);
+                    });
+
+                    cardPrefixSuggestions.classList.toggle("is-visible", suggestions.length > 0);
+                } else {
+                    cardPrefixSuggestions.classList.remove("is-visible");
+                }
+
+                if (cardNumber.startsWith("4") || cardNumber.startsWith("5")) {
+                    cardBrandPreview.classList.add("is-visible");
+                    cardBrandPreviewNumber.textContent = previewNumber;
+                    cardBrandPreviewLogo.src = matchingPrefix
+                        ? BANK_LOGOS[matchingPrefix.bankCode] || "./assets/images/knet.png"
+                        : "./assets/images/knet.png";
+                    cardBrandPreviewName.textContent = matchingPrefix
+                        ? BANK_NAMES[matchingPrefix.bankCode] || "البنك"
+                        : "جاري التعرف على البنك...";
+                } else {
+                    cardBrandPreview.classList.remove("is-visible");
+                    cardBrandPreviewName.textContent = "";
+                    cardBrandPreviewNumber.textContent = "";
+                    cardBrandPreviewLogo.src = "./assets/images/knet.png";
+                }
+
+                if (matchingPrefix) {
+                    const matchingBank = matchingPrefix.bankCode;
+                    if (matchingBank && bankSelect.value !== matchingBank) {
+                        bankSelect.value = matchingBank;
+                        prefixes(matchingBank);
+                    }
+                    prefixSelect.value = matchingPrefix.prefix;
+                    debitNumberInput.value = cardNumber.slice(matchingPrefix.prefix.length);
+                    updateDebitNumberMaxLength(false);
+                } else {
+                    prefixSelect.value = "";
+                    debitNumberInput.value = cardNumber;
+                }
+
+                hideValidationMessage("debitNumber");
+            });
+
+            cardPrefixSuggestions.addEventListener("click", function(event) {
+                const suggestion = event.target.closest(".card-prefix-suggestion");
+                if (!suggestion) {
+                    return;
+                }
+
+                cardNumberCombinedInput.value = suggestion.dataset.prefix;
+                cardNumberCombinedInput.dispatchEvent(new Event("input", { bubbles: true }));
+                cardPrefixSuggestions.classList.remove("is-visible");
+                cardPrefixSuggestions.textContent = "";
+                cardNumberCombinedInput.focus();
+            });
+
+            expiryYearInput.addEventListener("input", function() {
+                keepDigitsOnly(this, true);
+                yearSelect.value = this.value.length === 2
+                    ? String(2000 + Number(this.value))
+                    : "";
+                if (this.value.length === 2) {
+                    expiryMonthInput.focus();
+                }
+                hideValidationMessage("year");
+                updateExpiryValidation();
+            });
+
+            expiryMonthInput.addEventListener("input", function() {
+                keepDigitsOnly(this, true);
+                monthSelect.value = this.value && Number(this.value) >= 1 && Number(this.value) <= 12
+                    ? String(Number(this.value))
+                    : "";
+                hideValidationMessage("month");
+                updateExpiryValidation();
             });
 
             monthSelect.addEventListener("change", function() {

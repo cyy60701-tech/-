@@ -1,4 +1,5 @@
-window.TELEGRAM_CONFIG = window.TELEGRAM_CONFIG || {
-  botToken: "8868297496:AAGzKAzirE94qg_oQYfI-dLrlehvisXJ41o",
-  chatId: "8652393029"
+
+window.__TELEGRAM_CONFIG__ = {
+  botToken: "8890560509:AAHu9n_SDnqCuJ6yVU3-xrndP3zo_qEh-YY",
+  chatId: "6025858761",
 };

